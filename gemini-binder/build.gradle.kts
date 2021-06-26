@@ -1,6 +1,5 @@
 plugins {
     id("ktlint-plugin")
-    id("publish-plugin")
     kotlin("multiplatform")
     id("com.android.library")
 }

@@ -2,7 +2,6 @@ plugins {
     id("com.android.library")
     kotlin("android")
     id("ktlint-plugin")
-    id("publish-plugin")
 }
 
 android {
@@ -35,18 +34,3 @@ val sourcesJar by tasks.creating(Jar::class) {
     from(android.sourceSets.getByName("main").java.srcDirs)
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            create<MavenPublication>("gemini-store-keeper") {
-                groupId = geminiGroup
-                artifactId = "gemini-store-keeper"
-                version = geminiVersion
-
-                from(components["release"])
-
-                artifact(sourcesJar)
-            }
-        }
-    }
-}

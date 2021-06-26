@@ -1,5 +1,4 @@
 plugins {
-    id("publish-plugin")
     id("ktlint-plugin")
     kotlin("multiplatform")
 }
