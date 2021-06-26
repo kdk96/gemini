@@ -3,7 +3,7 @@ include(
     ":gemini-core-test",
     ":gemini-store-keeper",
     ":gemini-binder",
-    ":sample"
+//    ":sample"
 )
 
 if (startParameter.projectProperties.containsKey("check_publication")) {
